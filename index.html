@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>prime factorization</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="application/javascript" src="./factorization.js"></script>
+</head>
+
+<body>
+    <form action="#" method="get" onsubmit="factor(); return false">
+        <table class="noborder">
+            <tbody>
+                <tr>
+                    <td><label for="number">Number:</label></td>
+                    <td>
+                        <input type="number" id="number" style="width:12em" autocomplete="off" oninput="factor()" />
+                        <input type="submit" value="Factor" />
+                        <input type="button" value="Random" onclick="document.getElementById('number').value = Math.floor(Math.pow(1000, Math.random()) * 10).toString(); factor();" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factorization:</td>
+                    <td><span id="factorization0"></span><br /><span id="factorization1">&#xA0;<sup>&#xA0;</sup></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+</body>
+
+</html>
